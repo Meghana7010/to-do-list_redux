@@ -15,12 +15,12 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isEditing) {
-      // Handle editing
+  
       dispatch(EDIT_TODO_Action({ ...currentTodo, todo }));
       setIsEditing(false);
       setCurrentTodo(null);
     } else {
-      // Handle adding new todo
+
       dispatch(ADD_TODO_Action(todo));
     }
     setTodo('');
@@ -79,7 +79,7 @@ function App() {
                   border: '1px solid white',
                   color: 'white',
                   backgroundColor: 'orange',
-                  marginRight: 10,  // Add margin to the right of the Edit button
+                  marginRight: 10,  
                 }}
                 onClick={() => editHandler(t)}>Edit</button>
                 <button style={{
